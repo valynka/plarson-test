@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+header {
+  flex-shrink: 0;
+  min-height: 50px;
+  background: #ffe4b5;
+}
+footer {
+  flex-shrink: 0;
+  min-height: 100px;
+  background: #98fb98;
+}
+main {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+.contacts {
+  width: 200px;
+  background: #f08080;
+}
+.chat {
+  background: #7fffd4;
+  flex-grow: 2;
+}
+.hide-scrollbar {
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
