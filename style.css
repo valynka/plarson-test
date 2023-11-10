@@ -13,30 +13,33 @@ body {
   height: 100%;
 }
 header {
-  flex-shrink: 0;
+  flex-shrink: 0; /* необходимо для того, чтобы содержимое не образалось */
   min-height: 50px;
   background: #ffe4b5;
 }
 footer {
-  flex-shrink: 0;
+  flex-shrink: 0; /* необходимо для того, чтобы содержимое не образалось */
   min-height: 100px;
   background: #98fb98;
 }
 main {
   display: flex;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; /* убираем полосу прокрутки для всего окна */
 }
 .contacts {
   width: 200px;
+  overflow-y: auto; /* добавляем полосу прокрутки только для этого блока */
   background: #f08080;
 }
 .chat {
+  flex-grow: 2; /* необходимо для того, чтобы блок занял все доступное пространство */
+  overflow-y: auto; /* добавляем полосу прокрутки только для этого блока */
   background: #7fffd4;
-  flex-grow: 2;
 }
+
+/* Скрываем саму полосу прокрутки для красоты (не знаю, нужно ли было) */
 .hide-scrollbar {
-  overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
